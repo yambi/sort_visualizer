@@ -1,0 +1,21 @@
+//http://svn.python.org/projects/python/trunk/Objects/listsort.txt
+//http://codespeak.net/svn/pypy/trunk/pypy/rlib/listsort.py
+
+
+package algo{
+    public class TimSort extends SortAlgo{
+        override public function sort(array:Array):Array{
+            var i:int, start:int, end:int;
+            array = array.concat();
+            var count:int = 0;
+            var arrays:Array = [];
+            arrays.push(array.concat());
+            
+            arrays.push(array.concat());
+            arrays.push(count);
+            return arrays;
+        }
+
+    }
+}
+

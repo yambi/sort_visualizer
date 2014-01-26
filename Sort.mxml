@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" initialize="init()">
+  <mx:Style source="style.css"/>
+  <mx:Script source="main.as" />
+  <mx:VBox horizontalAlign="center">
+    <mx:UIComponent width="500" height="500" id="s"/>
+    <mx:Spacer height="20"/>
+    <mx:HBox>
+      <mx:ComboBox x="50" y="500" id="c_algorithm">
+        <mx:ArrayCollection>
+          <mx:String>Bubble Sort</mx:String>
+          <mx:String>Odd Even Sort</mx:String>
+          <mx:String>Shaker Sort</mx:String>
+          <mx:String>Comb Sort</mx:String>
+          <mx:String>Shell Sort</mx:String>
+          <mx:String>Insertion Sort</mx:String>
+          <mx:String>Binary Sort</mx:String>
+          <mx:String>Selection Sort</mx:String>
+          <mx:String>Quick Sort</mx:String>
+          <mx:String>Modified Quick Sort</mx:String>
+          <mx:String>Java Sort</mx:String>
+          <mx:String>Merge Sort</mx:String>
+          <mx:String>Strand Sort</mx:String>
+          <mx:String>Heap Sort</mx:String>
+          <mx:String>Radix Sort</mx:String>
+          <mx:String>Bucket Sort</mx:String>
+          <mx:String>Stooge Sort</mx:String>
+          <mx:String>Bogo Sort</mx:String>
+          <mx:String>Bozo Sort</mx:String>
+          <mx:String>Goro Sort</mx:String>
+        </mx:ArrayCollection>
+      </mx:ComboBox>
+      <mx:Spacer width="10"/>
+      <mx:CheckBox id="c_autoshuffle"  label="auto shuffle"/>
+      <mx:Button id="b_shuffle"  label="random" click="random();"/>
+      <mx:Button id="b_reverse"  label="reverse" click="reverse();"/>
+      <mx:Button id="b_sort" label="sort" click="sort();"/>
+      <mx:Button id="b_save" label="save" click="save();"/>
+    </mx:HBox>
+    <mx:HBox>
+        <mx:HSlider id="h_size" minimum="1" maximum="512" value="64" liveDragging="true"
+                    width="100" snapInterval="1" labels="['','elements','']" change="makeInput();"/>
+        <mx:TextInput id="t_size" width="40" text="64" textAlign="center" restrict="0-9" enter="tchange();"/>
+        <mx:HSlider id="h_thickness" minimum="1" maximum="16" value="2"
+                    width="100" snapInterval="1" labels="['','thickness','']" change="schange();"/>
+        <mx:HSlider id="h_alpha" minimum="0" maximum="1" value="0.8"
+                    width="100" snapInterval="0.01" labels="['','alpha','']" change="schange();"/>
+        <mx:Spacer width="20"/>
+        <!--- mx:Button id="b_fullscreen"  label="F"  click="fullscreen();"/ -->
+        <mx:Text id="t_compared" text="info" fontSize="12"/>
+    </mx:HBox>
+  </mx:VBox>
+</mx:Application>

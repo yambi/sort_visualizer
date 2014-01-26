@@ -1,0 +1,32 @@
+@namespace mx "library://ns.adobe.com/flex/mx";
+
+mx|Application {
+    background-color:#000000;
+    paddingRight: 10;
+    paddingLeft: 10;
+    paddingTop: 10;
+    paddingBottom: 10;
+}
+mx|ComboBox {
+   color: #000000;
+}
+mx|TextInput {
+   backgroundColor: #000000;
+   color: #FF0000;
+   textAlign: center;
+}
+mx|Text{
+    color:#FF0000;
+}
+mx|Button{
+    color:#000000;
+}
+mx|CheckBox{
+    color:#FF0000;
+}
+mx|HSlider{
+    labelStyleName:myLabelStyle
+}
+.myLabelStyle{
+    color: #FF0000;
+}
