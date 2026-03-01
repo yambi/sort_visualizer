@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1a1a1a;
+  color: #ccc;
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-size: 13px;
+  padding: 10px;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#canvas {
+  background-color: #000;
+  display: block;
+}
+
+.spacer {
+  height: 20px;
+}
+
+.controls-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+select {
+  background-color: #2a2a2a;
+  color: #eee;
+  border: 1px solid #555;
+  padding: 5px 10px;
+  font-size: 13px;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #333;
+  color: #eee;
+  border: 1px solid #555;
+  padding: 5px 14px;
+  font-size: 13px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #444;
+}
+
+button:active {
+  background-color: #222;
+}
+
+.checkbox-label {
+  color: #ccc;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+input[type="text"] {
+  width: 44px;
+  background-color: #2a2a2a;
+  color: #eee;
+  border: 1px solid #555;
+  text-align: center;
+  font-size: 13px;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.slider-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.slider-group label {
+  color: #aaa;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+}
+
+input[type="range"] {
+  width: 100px;
+  accent-color: #6cf;
+}
+
+#t_compared {
+  color: #ddd;
+  font-size: 13px;
+  white-space: pre-line;
+  min-width: 160px;
+}

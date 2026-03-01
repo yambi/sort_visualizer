@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sort Visualizer</title>
+<link rel="stylesheet" href="style_new.css">
+</head>
+<body>
+<div id="app">
+  <canvas id="canvas" width="500" height="500"></canvas>
+  <div class="spacer"></div>
+  <div class="controls-row">
+    <select id="c_algorithm">
+      <option>Bubble Sort</option>
+      <option>Odd Even Sort</option>
+      <option>Shaker Sort</option>
+      <option>Comb Sort</option>
+      <option>Shell Sort</option>
+      <option>Insertion Sort</option>
+      <option>Binary Sort</option>
+      <option>Selection Sort</option>
+      <option>Quick Sort</option>
+      <option>Modified Quick Sort</option>
+      <option>Java Sort</option>
+      <option>Merge Sort</option>
+      <option>Strand Sort</option>
+      <option>Heap Sort</option>
+      <option>Radix Sort</option>
+      <option>Bucket Sort</option>
+      <option>Stooge Sort</option>
+      <option>Bogo Sort</option>
+      <option>Bozo Sort</option>
+      <option>Goro Sort</option>
+    </select>
+    <label class="checkbox-label">
+      <input type="checkbox" id="c_autoshuffle"> auto shuffle
+    </label>
+    <button id="b_shuffle">random</button>
+    <button id="b_reverse">reverse</button>
+    <button id="b_sort">sort</button>
+    <button id="b_save">save</button>
+  </div>
+  <div class="controls-row">
+    <div class="slider-group">
+      <label>elements</label>
+      <input type="range" id="h_size" min="1" max="512" value="64" step="1">
+    </div>
+    <input type="text" id="t_size" value="64" maxlength="3">
+    <div class="slider-group">
+      <label>thickness</label>
+      <input type="range" id="h_thickness" min="1" max="16" value="2" step="1">
+    </div>
+    <div class="slider-group">
+      <label>alpha</label>
+      <input type="range" id="h_alpha" min="0" max="1" value="0.8" step="0.01">
+    </div>
+    <span id="t_compared">info</span>
+  </div>
+</div>
+<script src="algorithms.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
