@@ -161,6 +161,7 @@ bSort.addEventListener('click', doSort);
 bSave.addEventListener('click', saveImage);
 
 hSize.addEventListener('input', makeInput);
+tSize.addEventListener('change', tchange);
 tSize.addEventListener('keydown', function(e) {
   if (e.key === 'Enter') tchange();
 });

@@ -3,11 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sort Visualizer</title>
+<title>Sorting algorithm visualizer</title>
 <link rel="stylesheet" href="style_new.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-07LPVCZDWQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-07LPVCZDWQ');
+</script>
 </head>
 <body>
 <div id="app">
+  <h1 id="page-title">Sorting algorithm visualizer</h1>
   <canvas id="canvas" width="500" height="500"></canvas>
   <div class="spacer"></div>
   <div class="controls-row">
@@ -46,7 +54,7 @@
       <label>elements</label>
       <input type="range" id="h_size" min="1" max="512" value="64" step="1">
     </div>
-    <input type="text" id="t_size" value="64" maxlength="3">
+    <input type="number" id="t_size" value="64" min="1" max="512" step="1">
     <div class="slider-group">
       <label>thickness</label>
       <input type="range" id="h_thickness" min="1" max="16" value="2" step="1">

@@ -18,6 +18,14 @@ body {
   align-items: center;
 }
 
+#page-title {
+  align-self: flex-start;
+  color: #eee;
+  font-size: 18px;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+
 #canvas {
   background-color: #000;
   display: block;
@@ -71,8 +79,8 @@ button:active {
   gap: 5px;
 }
 
-input[type="text"] {
-  width: 44px;
+input[type="number"] {
+  width: 60px;
   background-color: #2a2a2a;
   color: #eee;
   border: 1px solid #555;
