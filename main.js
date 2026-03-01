@@ -137,6 +137,7 @@ function draw(arrays) {
       const num = arrays[i - 1][j];
       ctx.strokeStyle = getColorWithAlpha(num, SIZE, ALPHA);
       ctx.lineWidth = THICKNESS;
+      ctx.lineCap = 'round';
       ctx.beginPath();
       ctx.moveTo((i - 1) * w, j * h);
       ctx.lineTo(i * w, inv[arrays[i - 1][j]] * h);
