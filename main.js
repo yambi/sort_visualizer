@@ -46,6 +46,9 @@ const tSize = document.getElementById('t_size');
 const hThickness = document.getElementById('h_thickness');
 const hAlpha = document.getElementById('h_alpha');
 const tCompared = document.getElementById('t_compared');
+const algoLabel = document.getElementById('algo-label');
+const vThickness = document.getElementById('v_thickness');
+const vAlpha = document.getElementById('v_alpha');
 
 // State
 let SIZE = 64;
@@ -61,17 +64,19 @@ function schange() {
   ALPHA = parseFloat(hAlpha.value);
   h = SIZE > 1 ? 500.0 / (SIZE - 1) : 500;
   tSize.value = String(SIZE);
+  vThickness.textContent = THICKNESS;
+  vAlpha.textContent = ALPHA.toFixed(2);
 }
 
 function tchange() {
-  let num = parseInt(tSize.value) || 1;
-  if (num > 512) {
-    tSize.value = '512';
-    num = 512;
+  let num = parseInt(tSize.value) || 2;
+  if (num > 256) {
+    tSize.value = '256';
+    num = 256;
   }
-  if (num < 1) {
-    tSize.value = '1';
-    num = 1;
+  if (num < 2) {
+    tSize.value = '2';
+    num = 2;
   }
   hSize.value = num;
   makeInput();
@@ -94,6 +99,7 @@ function randomize() {
     ctx.arc(0, i * h, THICKNESS / 2, 0, Math.PI * 2);
     ctx.fill();
   }
+  algoLabel.textContent = '';
 }
 
 function reverseInit() {
@@ -108,6 +114,7 @@ function reverseInit() {
     ctx.arc(0, i * h, THICKNESS / 2, 0, Math.PI * 2);
     ctx.fill();
   }
+  algoLabel.textContent = '';
 }
 
 function clearCanvas() {
@@ -120,6 +127,7 @@ function doSort() {
   const str = cAlgorithm.value;
   const algo = SORTALGO[str];
   if (!algo) return;
+  algoLabel.textContent = str;
   const arrays = algo.sort(iarray);
   draw(arrays);
 }

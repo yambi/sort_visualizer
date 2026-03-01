@@ -16,54 +16,66 @@
 <body>
 <div id="app">
   <h1 id="page-title">Sorting algorithm visualizer</h1>
-  <canvas id="canvas" width="500" height="500"></canvas>
-  <div class="spacer"></div>
-  <div class="controls-row">
-    <select id="c_algorithm">
-      <option>Bubble Sort</option>
-      <option>Odd Even Sort</option>
-      <option>Shaker Sort</option>
-      <option>Comb Sort</option>
-      <option>Shell Sort</option>
-      <option>Insertion Sort</option>
-      <option>Binary Sort</option>
-      <option>Selection Sort</option>
-      <option>Quick Sort</option>
-      <option>Modified Quick Sort</option>
-      <option>Java Sort</option>
-      <option>Merge Sort</option>
-      <option>Strand Sort</option>
-      <option>Heap Sort</option>
-      <option>Radix Sort</option>
-      <option>Bucket Sort</option>
-      <option>Stooge Sort</option>
-      <option>Bogo Sort</option>
-      <option>Bozo Sort</option>
-      <option>Goro Sort</option>
-    </select>
-    <label class="checkbox-label">
-      <input type="checkbox" id="c_autoshuffle"> auto shuffle
-    </label>
-    <button id="b_shuffle">random</button>
-    <button id="b_reverse">reverse</button>
-    <button id="b_sort">sort</button>
-    <button id="b_save">save</button>
+  <div id="canvas-wrapper">
+    <canvas id="canvas" width="500" height="500"></canvas>
+    <span id="algo-label"></span>
   </div>
-  <div class="controls-row">
-    <div class="slider-group">
-      <label>elements</label>
-      <input type="range" id="h_size" min="1" max="512" value="64" step="1">
+  <div id="controls">
+    <div class="controls-row">
+      <select id="c_algorithm">
+        <option>Bubble Sort</option>
+        <option>Odd Even Sort</option>
+        <option>Shaker Sort</option>
+        <option>Comb Sort</option>
+        <option>Shell Sort</option>
+        <option>Insertion Sort</option>
+        <option>Binary Sort</option>
+        <option>Selection Sort</option>
+        <option>Quick Sort</option>
+        <option>Modified Quick Sort</option>
+        <option>Java Sort</option>
+        <option>Merge Sort</option>
+        <option>Strand Sort</option>
+        <option>Heap Sort</option>
+        <option>Radix Sort</option>
+        <option>Bucket Sort</option>
+        <option>Stooge Sort</option>
+        <option>Bogo Sort</option>
+        <option>Bozo Sort</option>
+        <option>Goro Sort</option>
+      </select>
+      <label class="checkbox-label">
+        <input type="checkbox" id="c_autoshuffle"> auto shuffle
+      </label>
+      <button id="b_shuffle">&#x1f500; random</button>
+      <button id="b_reverse">&#x1f503; reverse</button>
+      <button id="b_sort">&#x25b6; sort</button>
+      <button id="b_save">&#x1f4be; save</button>
     </div>
-    <input type="number" id="t_size" value="64" min="1" max="512" step="1">
-    <div class="slider-group">
-      <label>thickness</label>
-      <input type="range" id="h_thickness" min="1" max="16" value="2" step="1">
+    <div class="controls-row">
+      <div class="slider-group">
+        <label>elements</label>
+        <div class="slider-with-value">
+          <input type="range" id="h_size" min="2" max="256" value="64" step="1">
+        </div>
+      </div>
+      <input type="number" id="t_size" value="64" min="2" max="256" step="1">
+      <div class="slider-group">
+        <label>thickness</label>
+        <div class="slider-with-value">
+          <input type="range" id="h_thickness" min="1" max="16" value="2" step="1">
+          <span class="slider-value" id="v_thickness">2</span>
+        </div>
+      </div>
+      <div class="slider-group">
+        <label>alpha</label>
+        <div class="slider-with-value">
+          <input type="range" id="h_alpha" min="0" max="1" value="0.8" step="0.01">
+          <span class="slider-value" id="v_alpha">0.8</span>
+        </div>
+      </div>
+      <span id="t_compared">info</span>
     </div>
-    <div class="slider-group">
-      <label>alpha</label>
-      <input type="range" id="h_alpha" min="0" max="1" value="0.8" step="0.01">
-    </div>
-    <span id="t_compared">info</span>
   </div>
 </div>
 <script src="algorithms.js"></script>
